@@ -4,6 +4,7 @@
 /node_modules
 /.sass-cache
 /.pnp
+/css
 .pnp.js
 
 # testing

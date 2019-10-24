@@ -24,7 +24,7 @@ gulp.task('compass', function(done){
             style: sassStyle
         }))
         .on('error', gutil.log)
-        .pipe(gulp.dest(outputDir + 'css'))
+        .pipe(gulp.dest('src/css'))
         .pipe(connect.reload());
     done();
 });
