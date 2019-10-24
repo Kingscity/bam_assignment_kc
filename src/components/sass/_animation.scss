@@ -1,0 +1,56 @@
+
+@media (min-width: 1024px) {
+    .content-card {
+        &__info:hover {
+            .link:before {
+                height: 28px
+            }
+
+            .link:after {
+                transform: scaleX(1);
+            }
+        }
+
+        &__info {
+            position: relative;
+
+            .link:after, .link:before {
+                content: "";
+                position: absolute;
+                background: $mainText;
+                top: 50%;
+                transform: translateY(-50%)
+            }
+
+            .link:before {
+                height: 0;
+                transition: .3s ease;
+                width: 2px
+            }
+
+            .link:after {
+                width: 288px;
+                transition: .3s ease;
+                height: 2px;
+                transform: scaleX(0)
+            }
+        }
+    }
+
+    .content-card-0,
+    .content-card-1,
+    .content-card-3 {
+        .link:before {
+            left: -31px
+        }
+    }
+    
+    .content-card-0,
+    .content-card-1,
+    .content-card-3 {
+        .link:after {
+            left: -319px;
+            transform-origin: right center
+        }
+    }
+}

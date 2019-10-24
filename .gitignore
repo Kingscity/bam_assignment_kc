@@ -2,11 +2,13 @@
 
 # dependencies
 /node_modules
+/.sass-cache
 /.pnp
 .pnp.js
 
 # testing
 /coverage
+test.css
 
 # production
 /build
