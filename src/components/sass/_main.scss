@@ -328,6 +328,25 @@
         left: 50px;
     }
 
+    &:after {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 0;
+        background: #fff;
+        top: -10px;
+        left: 0;
+        transition: .5s ease
+    }
+
+    &.active:after {
+        width: 40px;
+    }
+
+    img {
+        width: 29px;
+    }
+
     p {
         text-transform: uppercase;
         font-weight: 500;
@@ -438,6 +457,20 @@
             transform: translate(-50%,-50%);
         }
         .link {
+            @media (max-width: 1023px) {
+                border: 1px solid hsla(40, 49%, 62%, .15);
+                padding: 15px 30px;
+                transition: .3s ease;
+                background: transparent;
+                width: 275px;
+                margin: 0 auto
+            }
+            
+            &:hover {
+                @media (max-width: 1023px) {
+                    background: hsla(40, 49%, 62%, .15)
+                }
+            }
             @media (min-width: 1024px) {
                 position: relative;
             }
@@ -498,6 +531,10 @@
         letter-spacing: 2.29px;
         text-transform: uppercase;
     }
+
+    .parallax-outer {
+        margin-left: 45px;
+    }
 }
 
 .content-card-0, .content-card-1, .content-card-3 {
@@ -531,12 +568,46 @@
                 top: auto;
                 padding: 70px 0;
             }
+
+            img {
+                @media (max-width: 1023px) {
+                    width: 203px;
+                }
+            }
+
+            .link {
+                @media (max-width: 1023px) {
+                    border-width: 0;
+
+                    &:hover {
+                        background: transparent;
+                    }
+                }
+            }            
         }
     }
     
 }
 .content-card-1 {
+
+    img {
+        @media (max-width: 1024px) {
+            max-width: 750px;
+        }
+    }
     .content-card {
+
+        &__info {
+            @media (max-width: 1024px) {
+                margin-left: 50px;
+            }
+
+            @media (min-width:1200px) {
+                margin-left: 100px;
+            }
+        }
+
+        
         &__img {
             @media (max-width: 767px) {
                 width: 600px;
