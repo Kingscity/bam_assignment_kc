@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaBars, FaTimes } from "react-icons/fa";
 
 class NavBar extends Component {
@@ -45,15 +45,15 @@ class NavBar extends Component {
                 <div className={'menu ' + (this.props.menuDisplay ? 'active' : '')}>
                     <div className="menu-bg" style={menuStyle} />
                     <ul>
-                        <li><Link to="/" onMouseOver={() => this.props.toggleMenuItem('home')}>Home</Link></li>
-                        <li><Link to="/robson" onMouseOver={() => this.props.toggleMenuItem('robson')}>Only One Robson</Link></li>
-                        <li><Link to="/views" onMouseOver={() => this.props.toggleMenuItem('views')}>270<sup>o</sup> Veiws</Link></li>
-                        <li><Link to="/residences" onMouseOver={() => this.props.toggleMenuItem('residences')}>Refined Residences</Link></li>
-                        <li><Link to="/amenities" onMouseOver={() => this.props.toggleMenuItem('amenities')}>Club Robson, Lifestyle <br /> Concierge Services</Link></li>
-                        <li><Link to="/team" onMouseOver={() => this.props.toggleMenuItem('team')}>Award-Winning Team</Link></li>
-                        <li><Link to="/media" onMouseOver={() => this.props.toggleMenuItem('media')}>Media</Link></li>
-                        <li><Link to="/register" onMouseOver={() => this.props.toggleMenuItem('register')}>Register</Link></li>
-                        <li><Link to="/contact" onMouseOver={() => this.props.toggleMenuItem('contact')}>Contact</Link></li>
+                        <li><NavLink activeClassName='router-link-exact-active' to="/" onMouseOver={() => this.props.toggleMenuItem('home')}>Home</NavLink></li>
+                        <li><NavLink activeClassName='router-link-exact-active' to="/robson" onMouseOver={() => this.props.toggleMenuItem('robson')}>Only One Robson</NavLink></li>
+                        <li><NavLink activeClassName='router-link-exact-active' to="/views" onMouseOver={() => this.props.toggleMenuItem('views')}>270<sup>o</sup> Veiws</NavLink></li>
+                        <li><NavLink activeClassName='router-link-exact-active' to="/residences" onMouseOver={() => this.props.toggleMenuItem('residences')}>Refined Residences</NavLink></li>
+                        <li><NavLink activeClassName='router-link-exact-active' to="/amenities" onMouseOver={() => this.props.toggleMenuItem('amenities')}>Club Robson, Lifestyle <br /> Concierge Services</NavLink></li>
+                        <li><NavLink activeClassName='router-link-exact-active' to="/team" onMouseOver={() => this.props.toggleMenuItem('team')}>Award-Winning Team</NavLink></li>
+                        <li><NavLink activeClassName='router-link-exact-active' to="/media" onMouseOver={() => this.props.toggleMenuItem('media')}>Media</NavLink></li>
+                        <li><NavLink activeClassName='router-link-exact-active' to="/register" onMouseOver={() => this.props.toggleMenuItem('register')}>Register</NavLink></li>
+                        <li><NavLink activeClassName='router-link-exact-active' to="/contact" onMouseOver={() => this.props.toggleMenuItem('contact')}>Contact</NavLink></li>
                     </ul>
                     <div className="menu-bottom">
                         <div className="menu-bottom__contact">

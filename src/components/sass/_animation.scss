@@ -44,13 +44,42 @@
             left: -31px
         }
     }
-    
+
     .content-card-0,
     .content-card-1,
     .content-card-3 {
         .link:after {
             left: -319px;
             transform-origin: right center
+        }
+    }
+}
+
+.menu {
+    li {
+        a:after {
+            content: "";
+            width: 0;
+            transition: .6s ease;
+            height: 1px;
+            background-color: hsla(0, 0%, 100%, .7);
+            position: absolute;
+            left: 0;
+            bottom: -5px
+        }
+        a:hover:after {
+            width: 100%;
+        }
+
+        a.router-link-exact-active:after {
+            content: "";
+            width: 100%;
+            transition: .6s ease;
+            height: 1px;
+            background-color: hsla(0, 0%, 100%, .7);
+            position: absolute;
+            left: 0;
+            bottom: -5px
         }
     }
 }

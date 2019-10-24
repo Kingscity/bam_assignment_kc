@@ -665,3 +665,26 @@ li {
     transform-origin: right center;
   }
 }
+.menu li a:after {
+  content: "";
+  width: 0;
+  transition: .6s ease;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+.menu li a:hover:after {
+  width: 100%;
+}
+.menu li a.router-link-exact-active:after {
+  content: "";
+  width: 100%;
+  transition: .6s ease;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
